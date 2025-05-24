@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BeyoundChats
 
-## Getting Started
+A responsive chat application built with Next.js, React, Redux, and Tailwind CSS.
 
-First, run the development server:
+
+
+## Project Overview
+
+BeyoundChats is a customer support chat interface that provides:
+- Multi-conversation inbox management
+- Responsive design for both desktop and mobile
+- AI assistant integration
+- Clean, intuitive user interface
+
+## Features
+
+- **Three-panel layout**: Inbox sidebar, message section, and AI Copilot panel
+- **Responsive design**: Adapts seamlessly between mobile and desktop views
+- **AI Assistant**: Slide-in panel with helpful conversation insights
+- **Smooth transitions**: Clean animations for panel switching
+
+## Technical Implementation
+
+### Built With
+- Next.js
+- React
+- Redux for state management
+- Tailwind CSS for styling
+- TypeScript
+
+### Key Components
+- `InboxBar`: Manages conversation list and selection
+- `MessageSection`: Displays messages and input for active conversation
+- `ChatbotSection`: Provides AI assistance with tabbed interface
+
+### Responsive Approach
+- Desktop: Three-column layout with all panels visible
+- Mobile: Single panel view with intuitive navigation
+- Uses modern viewport height units (`svh`) for consistent mobile experience
+
+## Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Assignment Context
+This project demonstrates implementation of a responsive chat interface with modern web technologies, focusing on UI/UX design principles, responsive layouts, and state management.
