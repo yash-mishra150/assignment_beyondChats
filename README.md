@@ -2,7 +2,8 @@
 
 A responsive chat application built with Next.js, React, Redux, and Tailwind CSS.
 
-
+## Live Demo
+https://assignment-beyond-chats.vercel.app/
 
 ## Project Overview
 
