@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import InboxBar from './components/inboxBar';

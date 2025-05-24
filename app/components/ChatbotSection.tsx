@@ -2,10 +2,8 @@ import * as React from 'react';
 import { useState } from 'react';
 import { IoMdClose } from "react-icons/io";
 import { Button } from './ui/button';
-import { IoSquare } from "react-icons/io5";
 import { FaRobot } from "react-icons/fa";
 import { IoChevronUp } from "react-icons/io5";
-import { LuSquareAsterisk } from "react-icons/lu";
 import { useAppSelector } from '../redux/hooks';
 
 interface ChatbotSectionProps {

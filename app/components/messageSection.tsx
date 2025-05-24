@@ -7,7 +7,6 @@ import { LuBot } from "react-icons/lu";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiLightningBolt } from "react-icons/hi";
-import { IoSend } from "react-icons/io5";
 import { FiPaperclip } from "react-icons/fi";
 import { FaFaceSmile } from "react-icons/fa6";
 import { FaMessage } from "react-icons/fa6";
@@ -16,7 +15,7 @@ interface messageSectionProps {
     onClickOpen?: () => void;
 }
 
-const messageSection = ({ onClickOpen }: messageSectionProps) => {
+const MessageSection = ({ onClickOpen }: messageSectionProps) => {
     const dataState = useAppSelector((state) => state.currentSelector.value);
 
     return (
@@ -115,4 +114,4 @@ const messageSection = ({ onClickOpen }: messageSectionProps) => {
     );
 };
 
-export default messageSection;
+export default MessageSection;

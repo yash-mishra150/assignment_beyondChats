@@ -8,41 +8,41 @@ import {
 } from "./ui/Dropdown"
 import { Button } from './ui/button';
 import { IoIosArrowDown } from "react-icons/io";
-import { data } from '../constants/data';
+import { data, dataType } from '../constants/data';
 import { useAppDispatch } from '../redux/hooks';
 import { setCurrentItem } from '../redux/slices/currentSelector';
 
-const inboxBar = () => {
+const InboxBar = () => {
     const dispatch = useAppDispatch()
     const truncateText = (text: string, maxLength: number = 25) => {
         if (text.length <= maxLength) return text;
         return text.slice(0, maxLength) + '...';
     };
 
-    const handleItemClick = (item: any) => {
+    const handleItemClick = (item: dataType) => {
         // Update Redux state only
-        const serializedItem = {
-            ...item,
-            lastMessageTime: item.lastMessageTime.toISOString()
-        };
-        dispatch(setCurrentItem(serializedItem));
+        dispatch(setCurrentItem(item));
     };
-    
+
     // Auto-select first item on desktop only
     useEffect(() => {
-        // Check if we're on desktop (not mobile)
-        const isDesktop = window.innerWidth >= 768; // md breakpoint in Tailwind
-        
+        const isDesktop = window.innerWidth >= 768;
+
         if (isDesktop && data.length > 0) {
-            // Select the first chat item by default
             const firstItem = data[0];
+
+            // If you've already converted to a string, parse it back to a Date
             const serializedItem = {
                 ...firstItem,
-                lastMessageTime: firstItem.lastMessageTime.toISOString()
+                // No need to convert if it's already a Date
+                lastMessageTime: typeof firstItem.lastMessageTime === 'string'
+                    ? new Date(firstItem.lastMessageTime)
+                    : firstItem.lastMessageTime
             };
             dispatch(setCurrentItem(serializedItem));
         }
-    }, [dispatch]); // Only run once on component mount
+    }, [dispatch, data]);
+
 
     return (
         <div className='flex flex-col w-full md:w-72 h-screen md:border-r-2 md:border-neutral-300 p-3'>
@@ -51,10 +51,10 @@ const inboxBar = () => {
             <div className="overflow-y-auto">
                 {
                     data.map((item, index) => (
-                        <Button 
-                            onClick={() => handleItemClick(item)} 
-                            key={index} 
-                            variant='ghost' 
+                        <Button
+                            onClick={() => handleItemClick(item)}
+                            key={index}
+                            variant='ghost'
                             className='w-full h-16 flex flex-row justify-between items-center my-2'
                         >
                             <div className='flex flex-row items-center w-full'>
@@ -105,4 +105,4 @@ const DropMenu = () => {
     );
 }
 
-export default inboxBar;
+export default InboxBar;
