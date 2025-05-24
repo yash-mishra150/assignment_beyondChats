@@ -50,7 +50,7 @@ const MessageSection = ({ onClickOpen }: messageSectionProps) => {
                             <p className="text-sm font-nunito">
                                 I bought a product from your store in November as a Christmas gift for a
                                 member of my family. However, it turns out they have something very similar
-                                already. I was hoping you'd be able to refund me, as it is un-opened.
+                                already. I was hoping you&apos;d be able to refund me, as it is un-opened.
                             </p>
                         </div>
                         <div className="flex items-center mt-1">

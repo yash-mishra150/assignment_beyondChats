@@ -1,4 +1,4 @@
-import { data, dataType } from '@/app/constants/data'
+import { dataType } from '@/app/constants/data'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 interface CurrentSelectorState {

@@ -61,7 +61,7 @@ const ChatbotSection = ({ isOpen, onClose }: ChatbotSectionProps) => {
             <div className="bg-black rounded-lg p-3 w-12 h-12 flex items-center justify-center mb-4">
               <FaRobot className="h-6 w-6 text-white" />
             </div>
-            <p className="text-center font-medium mb-2">Hi, I'm Fin AI Copilot</p>
+            <p className="text-center font-medium mb-2">Hi, I&apos;m Fin AI Copilot</p>
             <p className="text-center text-gray-500 text-sm">
               Ask me anything about this conversation.
             </p>
